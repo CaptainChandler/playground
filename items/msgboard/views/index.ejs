@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <h2>--留言--</h2>
+    <div>
+      <form action="/" method="post">
+        <label>姓名：</label>
+        <input type='text' id="postname" name="postname" /><br>
+        <label>内容：</label>
+        <textarea id="inputmsg" name="inputmsg"></textarea><br>
+        <input type="submit" value="发布"/>
+      </form>
+    </div>
+
+    <h2>--------------------------------</h2>
+    <div style="visibility: <%= vMsg%>">
+      <p><%= msg%></p>
+    </div>
+    <div style="visibility: <%= visibility%>">
+      <label type='text' id="postname" name="postname" disabled="disabled">
+        <%= postname %>
+      </label>||
+      <label type='text' id="posttime" name="posttime" disabled="disabled">
+        <%= posttime %>
+      </label><br>
+      <textarea id="showedmsg" disabled="disabled"><%= postbody %></textarea>
+    </div>
+  </body>
+</html>
